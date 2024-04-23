@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "./dist", // Assuming you want TypeScript files to be compiled into a 'dist' directory
+    "rootDir": "./src", // Assuming your source files are located in the 'src' directory
+    "resolveJsonModule": true,
+    "sourceMap": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
