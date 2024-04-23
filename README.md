@@ -33,7 +33,7 @@ npx tsc --init
 ```
 
 ### The project follows a standard directory structure:
-
+```python
 graphql
 Copy code
 project-root/
@@ -54,7 +54,7 @@ project-root/
 ├── package.json # Project metadata and dependencies
 ├── tsconfig.json # TypeScript configuration
 └── README.md # Project documentation
-
+```
 ### Configure TypeScript settings:
 
 ```bash
@@ -82,6 +82,22 @@ project-root/
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts"
 }
 ```
+### create src/server.ts
+```typescript
+import express from 'express';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+```
+
 
 ```bash
 npm start
